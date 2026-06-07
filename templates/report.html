@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="海外广告与新平台情报日报 {{DATE}}：{{DESCRIPTION}}">
+  <meta property="og:title" content="海外广告与新平台情报 — {{DATE}}">
+  <meta property="og:description" content="{{OG_DESCRIPTION}}">
+  <meta property="og:type" content="article">
+  <title>海外广告与新平台情报 - {{DATE}}</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>海外广告与新平台情报</h1>
+      <p class="deck">{{DATE}} 版｜检索时间：北京时间 {{FETCH_TIME}}｜阅读时长约 {{READING_TIME}} 分钟｜海外市场为主，国内案例仅作打法补充。</p>
+      <div class="topline">
+        <span class="tag hot">{{PRIMARY_TAG}}</span>
+        <span class="tag">{{TAG_2}}</span>
+        <span class="tag">{{TAG_3}}</span>
+        <span class="tag">广告素材与创意资产</span>
+        <span class="tag">案例拆解</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="panel">
+      <h2>今日总判断</h2>
+      <p class="note">{{SUMMARY_JUDGEMENT}}【性质：推断】【来源：<a href="{{SOURCE_URL_1}}">{{SOURCE_NAME_1}}</a>；<a href="{{SOURCE_URL_2}}">{{SOURCE_NAME_2}}</a>】</p>
+    </section>
+
+    <section>
+      <h2>海外重点信号</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="num">01</div>
+          <h3>{{SIGNAL_TITLE}}</h3>
+          <p>{{SIGNAL_FACT}}【性质：事实】【来源：<a href="{{SIGNAL_SOURCE_URL}}">{{SIGNAL_SOURCE_NAME}}</a>】</p>
+          <p>{{SIGNAL_IMPLICATION}}【性质：推断】【来源：<a href="{{SIGNAL_SOURCE_URL}}">{{SIGNAL_SOURCE_NAME}}</a>】</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>新广告平台与 AI 原生广告</h2>
+      <p>{{AI_AD_PLATFORM_ITEM}}【性质：事实】【来源：<a href="{{AI_SOURCE_URL}}">{{AI_SOURCE_NAME}}</a>】</p>
+    </section>
+
+    <section class="panel">
+      <h2>广告素材与创意资产</h2>
+      <h3>1. 素材平台 / 工具动态</h3>
+      <p>{{CREATIVE_TOOL_UPDATE}}【性质：事实】【来源：<a href="{{CREATIVE_TOOL_SOURCE_URL}}">{{CREATIVE_TOOL_SOURCE_NAME}}</a>】</p>
+      <h3>2. 素材趋势 / 格式变化</h3>
+      <p>{{CREATIVE_TREND}}【性质：事实 + 推断】【来源：<a href="{{CREATIVE_TREND_SOURCE_URL}}">{{CREATIVE_TREND_SOURCE_NAME}}</a>】</p>
+      <h3>3. 可执行素材测试建议</h3>
+      <ul>
+        <li>{{CREATIVE_TEST_1}}【性质：推断】【来源：<a href="{{CREATIVE_TEST_SOURCE_URL}}">{{CREATIVE_TEST_SOURCE_NAME}}</a>】</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>案例深拆</h2>
+      <h3>{{CASE_TITLE}}</h3>
+      <p>品牌 / 产品：{{CASE_BRAND_PRODUCT}}【性质：事实】【来源：<a href="{{CASE_SOURCE_URL_1}}">{{CASE_SOURCE_NAME_1}}</a>；<a href="{{CASE_SOURCE_URL_2}}">{{CASE_SOURCE_NAME_2}}</a>】</p>
+      <p>人群与场景：{{CASE_AUDIENCE_SCENE}}【性质：事实】【来源：<a href="{{CASE_SOURCE_URL_1}}">{{CASE_SOURCE_NAME_1}}</a>】</p>
+      <p>商业目标：{{CASE_BUSINESS_GOAL}}【性质：案例观察】【来源：<a href="{{CASE_SOURCE_URL_1}}">{{CASE_SOURCE_NAME_1}}</a>】</p>
+      <p>核心洞察：{{CASE_INSIGHT}}【性质：案例观察】【来源：<a href="{{CASE_SOURCE_URL_1}}">{{CASE_SOURCE_NAME_1}}</a>；<a href="{{CASE_SOURCE_URL_2}}">{{CASE_SOURCE_NAME_2}}</a>】</p>
+      <p>创意概念：{{CASE_CREATIVE_CONCEPT}}【性质：案例观察】【来源：<a href="{{CASE_SOURCE_URL_1}}">{{CASE_SOURCE_NAME_1}}</a>】</p>
+      <p>广告素材拆解：{{CASE_CREATIVE_BREAKDOWN}}【性质：案例观察】【来源：<a href="{{CASE_SOURCE_URL_1}}">{{CASE_SOURCE_NAME_1}}</a>】</p>
+      <p>媒介 / 平台组合与转化路径：{{CASE_MEDIA_CONVERSION}}【性质：事实 + 推断】【来源：<a href="{{CASE_SOURCE_URL_1}}">{{CASE_SOURCE_NAME_1}}</a>；<a href="{{CASE_SOURCE_URL_2}}">{{CASE_SOURCE_NAME_2}}</a>】</p>
+      <p>结果信号：{{CASE_RESULT_SIGNAL}}【性质：数据 / 案例观察】【来源：<a href="{{CASE_SOURCE_URL_1}}">{{CASE_SOURCE_NAME_1}}</a>】</p>
+      <p>可复用打法：{{CASE_REUSABLE_PLAYBOOK}}【性质：推断】【来源：<a href="{{CASE_SOURCE_URL_1}}">{{CASE_SOURCE_NAME_1}}</a>】</p>
+      <p>风险与本地化注意点：{{CASE_RISK_LOCALIZATION}}【性质：推断】【来源：<a href="{{CASE_SOURCE_URL_1}}">{{CASE_SOURCE_NAME_1}}</a>】</p>
+    </section>
+
+    <section class="panel">
+      <h2>国内打法补充</h2>
+      <p>{{CHINA_PLAYBOOK_SUPPLEMENT}}【性质：案例观察；单一来源，需后续验证】【来源：<a href="{{CHINA_SOURCE_URL}}">{{CHINA_SOURCE_NAME}}</a>】</p>
+    </section>
+
+    <section class="panel">
+      <h2>今日可执行小实验</h2>
+      <ul>
+        <li>{{EXPERIMENT_1}}【性质：推断】【来源：<a href="{{EXPERIMENT_SOURCE_URL}}">{{EXPERIMENT_SOURCE_NAME}}</a>】</li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>待验证线索</h2>
+      <p class="warn">{{UNVERIFIED_LEAD}}【性质：事实；单一来源，需后续验证】【来源：<a href="{{UNVERIFIED_SOURCE_URL}}">{{UNVERIFIED_SOURCE_NAME}}</a>】</p>
+    </section>
+
+    <section class="panel">
+      <h2>来源索引</h2>
+      <ul class="sources">
+        <li><a href="{{SOURCE_URL_1}}">{{SOURCE_NAME_1}}</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    本页所有具体平台动作、数据和案例结果均在正文逐条标注来源；“推断”均基于同条列示来源，不作为独立事实陈述。
+  </footer>
+</body>
+</html>
