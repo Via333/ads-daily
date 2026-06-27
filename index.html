@@ -3,45 +3,40 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>海外广告与新平台情报 - 2026-06-26</title>
+  <title>海外广告与新平台情报 - 2026-06-27</title>
   <style>
     :root {
       color-scheme: light;
-      --bg: #f4efe6;
-      --panel: rgba(255, 252, 246, 0.96);
-      --ink: #1f2937;
+      --bg: #f7f8fb;
+      --panel: #ffffff;
+      --ink: #172033;
       --muted: #667085;
-      --line: #d8cfbf;
-      --accent: #9a3412;
-      --accent-soft: #ffedd5;
-      --green: #14532d;
-      --green-soft: #dcfce7;
-      --yellow-soft: #fef3c7;
-      --warn-soft: #fff7ed;
+      --line: #d8dee8;
+      --accent: #0f766e;
+      --accent-2: #7c3aed;
+      --soft: #ecfdf5;
+      --soft-2: #f5f3ff;
+      --warn: #fff7ed;
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: Georgia, "Times New Roman", "Noto Serif SC", serif;
+      font-family: "Inter", "Noto Sans SC", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       color: var(--ink);
       line-height: 1.72;
-      background:
-        radial-gradient(circle at top right, rgba(154, 52, 18, 0.12), transparent 24%),
-        linear-gradient(180deg, #fbf8f1 0%, var(--bg) 100%);
+      background: linear-gradient(180deg, #ffffff 0%, var(--bg) 78%);
     }
     a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
-    header {
-      border-bottom: 1px solid var(--line);
-      background: rgba(255, 252, 246, 0.9);
-      backdrop-filter: blur(10px);
-    }
-    .wrap { max-width: 1100px; margin: 0 auto; padding: 28px 20px 56px; }
-    h1, h2, h3 { margin: 0; line-height: 1.2; }
-    h1 { font-size: clamp(30px, 5vw, 52px); letter-spacing: -0.03em; }
-    h2 { font-size: 26px; margin-bottom: 14px; }
-    h3 { font-size: 19px; margin-bottom: 10px; }
+    header { border-bottom: 1px solid var(--line); background: #ffffff; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 26px 20px 56px; }
+    h1, h2, h3 { margin: 0; line-height: 1.25; }
+    h1 { font-size: clamp(30px, 5vw, 48px); letter-spacing: 0; }
+    h2 { font-size: 25px; margin-bottom: 14px; }
+    h3 { font-size: 18px; margin: 18px 0 8px; }
     p { margin: 0 0 12px; }
-    section { margin-top: 28px; }
+    section { margin-top: 26px; }
+    ul, ol { padding-left: 22px; margin: 8px 0 0; }
+    li { margin: 8px 0; }
     .deck { color: var(--muted); max-width: 860px; margin-top: 10px; }
     .topline { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
     .tag {
@@ -50,85 +45,56 @@
       padding: 4px 10px;
       border-radius: 999px;
       border: 1px solid var(--line);
-      background: #fffdf8;
+      background: #ffffff;
       color: var(--muted);
       font-size: 13px;
     }
-    .tag.hot { background: var(--accent-soft); border-color: #fdba74; color: #7c2d12; }
+    .tag.hot { background: var(--soft); border-color: #99f6e4; color: #115e59; }
     .panel {
       background: var(--panel);
       border: 1px solid var(--line);
-      border-radius: 18px;
+      border-radius: 8px;
       padding: 22px;
-      box-shadow: 0 18px 40px rgba(17, 24, 39, 0.05);
-    }
-    .note {
-      border-left: 4px solid var(--accent);
-      padding-left: 14px;
-      font-size: 17px;
+      box-shadow: 0 14px 34px rgba(17, 24, 39, 0.04);
     }
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 16px;
+      gap: 14px;
     }
     .card {
-      background: #fffdf8;
+      background: #ffffff;
       border: 1px solid var(--line);
-      border-radius: 16px;
-      padding: 18px;
+      border-radius: 8px;
+      padding: 16px;
     }
-    .num {
+    .label {
       display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 44px;
-      height: 28px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      font-size: 13px;
+      margin-right: 6px;
+      padding: 1px 7px;
+      border-radius: 6px;
+      background: var(--soft-2);
+      color: var(--accent-2);
+      font-size: 12px;
       font-weight: 700;
-      margin-bottom: 10px;
     }
-    .meta {
-      display: inline-block;
-      margin-bottom: 10px;
-      padding: 3px 10px;
-      border-radius: 999px;
-      border: 1px solid #86efac;
-      background: var(--green-soft);
-      color: var(--green);
-      font-size: 13px;
-    }
-    .soft {
-      background: var(--yellow-soft);
-      border-left: 4px solid #f59e0b;
-      padding: 12px 14px;
-    }
-    .warn {
-      background: var(--warn-soft);
-      border-left: 4px solid #ea580c;
-      padding: 12px 14px;
-      color: #9a3412;
-    }
-    ul { margin: 0; padding-left: 20px; }
-    li { margin: 10px 0; }
-    .sources li { word-break: break-word; }
-    footer { margin-top: 30px; color: var(--muted); font-size: 14px; }
+    .source { color: var(--muted); font-size: 14px; }
+    .warn { background: var(--warn); border-color: #fed7aa; }
+    .experiment { border-left: 4px solid var(--accent); padding-left: 14px; }
+    .index li { word-break: break-word; }
   </style>
 </head>
 <body>
   <header>
     <div class="wrap">
       <h1>海外广告与新平台情报</h1>
-      <p class="deck">2026-06-26 版｜检索时间：北京时间 2026-06-26 08:18｜阅读时长约 7 分钟｜海外市场为主，国内只作为打法补充。所有重点信息均在正文逐条标注【性质】与【来源】；来源不足的线索仅进入“待验证线索”。</p>
+      <p class="deck">2026-06-27｜海外市场为主；本期重点是 AI 搜索/Agent 广告、Creator Commerce、Reddit 社区智能、CTV 零售媒体与素材测试。</p>
       <div class="topline">
         <span class="tag hot">AI 原生广告</span>
-        <span class="tag">Amazon / Google / YouTube</span>
-        <span class="tag">Meta / TikTok / Reddit</span>
-        <span class="tag">Netflix / CTV</span>
-        <span class="tag">素材与创意资产</span>
+        <span class="tag">Creator Commerce</span>
+        <span class="tag">CTV / Retail Media</span>
+        <span class="tag">素材与转化路径</span>
+        <span class="tag">5-8 分钟阅读</span>
       </div>
     </div>
   </header>
@@ -136,134 +102,113 @@
   <main class="wrap">
     <section class="panel">
       <h2>今日总判断</h2>
-      <p class="note">截至北京时间 2026 年 6 月 26 日，这一周最值得重视的变化不是平台又多了几个 AI 功能按钮，而是广告正在被嵌进“对话式决策与即时成交”链路本身。Amazon 2026-06-23 上线 Alexa+ Agentic Ads，允许用户在对话里直接下单；TikTok 2026-06-22 把 Symphony Agent 接入 Creative Studio、Content Suite 和 TikTok One；Reddit 2026-06-22 把 Shopping Listing Ads、Redditor Highlights 和 free-form ad generator 统一放进“真实对话驱动购买决策”的框架；Google 2026-06-25 和 2026-06-23 继续把 Gemini 创意建议、Demand Gen 创意优化和 YouTube 创作者洞察推进到投放工作流里。【性质：事实】【来源：<a href="https://advertising.amazon.com/library/news/alexa-agentic-ads">Amazon Ads：Alexa+ Agentic Ads</a>；<a href="https://ads.tiktok.com/business/en/blog/symphony-agent">TikTok For Business：Introducing Symphony Agent</a>；<a href="https://redditinc.com/news/live-from-cannes-2026-real-conversations-are-driving-the-new-consumer-decision-journey">Reddit：Cannes 2026 consumer decision journey</a>；<a href="https://blog.google/products/ads-commerce/demand-gen-drop-june-2026/">Google：June's Demand Gen Drop</a>；<a href="https://blog.google/products/ads-commerce/youtube-insights-tools-cannes-lions-2026/">Google：YouTube insights tools at Cannes Lions 2026</a>】</p>
-      <p class="soft">对广告主的实际含义是：商品卖点、FAQ、目录字段、创意脚本、达人素材、评价证据和结算/预约动作，不再只是“广告后面的承接层”，而要变成可被 Agent、会话界面和自动化创意工具直接调用的结构化资产。【性质：推断】【来源：<a href="https://advertising.amazon.com/library/news/alexa-agentic-ads">Amazon Ads：Alexa+ Agentic Ads</a>；<a href="https://about.fb.com/news/2026/06/meta-business-agent/">Meta：Business Agent</a>；<a href="https://ads.tiktok.com/business/en/blog/symphony-agent">TikTok：Symphony Agent</a>；<a href="https://blog.google/products/ads-commerce/demand-gen-drop-june-2026/">Google：June's Demand Gen Drop</a>】</p>
+      <p><span class="label">推断</span>海外广告的主线不是“AI 替代创意”，而是“AI 扩大投放与素材变体，人的创意负责差异化和信任”。依据是：Meta 在 Cannes 2026 把广告系统描述为覆盖创建、测试、投放的端到端 AI 平台；同周 Business Insider 对 Cannes 的现场总结称，广告主也在反思 AI 幻觉、过度优化和创意同质化的问题；IAB 相关报道显示创作者广告支出仍在高速增长。<span class="source">【来源】<a href="https://www.techradar.com/pro/meta-announces-end-to-end-suite-of-ai-advertising-and-marketing-tools-and-the-roi-so-far-is-staggering">TechRadar, 2026-06-24</a>；<a href="https://www.businessinsider.com/cannes-lions-recap-creativity-ai-creators-2026-6">Business Insider, 2026-06-26</a>；<a href="https://www.tvtechnology.com/news/iab-creator-economy-ad-spend-now-dwarfs-ad-spend-for-total-media-industry">TVTechnology 对 IAB 报告的报道, 2025-11</a></span></p>
+      <p><span class="label">推断</span>今天可执行的投放方向是：把预算从“单一平台买量”拆成三层测试，第一层用 Google/Meta 的 AI 广告产品做意图承接，第二层用 Reddit/creator 内容补充决策信任，第三层用 CTV/零售媒体做可归因触达；这个判断来自 Google AI Mode 广告测试、Reddit community intelligence、Walmart 收购 Vibe.co 三条同周信号。<span class="source">【来源】<a href="https://www.washingtonpost.com/technology/2026/01/13/advertising-google-ai-mode-chatgpt/">Washington Post, 2026-01-13</a>；<a href="https://www.axios.com/2026/06/22/reddit-ads-shopping-community-intelligence">Axios, 2026-06-22</a>；<a href="https://www.wsj.com/business/retail/walmart-in-biggest-deal-in-two-years-buys-advertising-tech-firm-ccd6c03b">Wall Street Journal, 2026-06-23</a></span></p>
     </section>
 
     <section>
       <h2>海外重点信号</h2>
       <div class="grid">
         <article class="card">
-          <div class="num">01</div>
-          <h3>Amazon 把“看广告到下单”压缩进 Alexa 对话里</h3>
-          <p>Amazon Ads 2026-06-23 宣布 Alexa+ Agentic Ads 上线，称其为首个让客户从看到广告到在对话内完成购买、无需跳出广告的格式；首批合作方包括 Papa Johns，以及 Beck、Jill Scott、Omar Courtz 的演出票务场景，当前可在 Echo Show 设备上使用。【性质：事实】【来源：<a href="https://advertising.amazon.com/library/news/alexa-agentic-ads">Amazon Ads：Alexa+ Agentic Ads</a>】</p>
-          <p>对电商与本地生活广告主的推断是：如果结算动作可以被对话直接触发，素材和商品页就必须把“问答、选项、优惠、履约方式”写成能被机器消费的字段，而不是只写成给人读的长文案。【性质：推断】【来源：<a href="https://advertising.amazon.com/library/news/alexa-agentic-ads">Amazon Ads：Alexa+ Agentic Ads</a>；<a href="https://advertising.amazon.com/library/news/agentic-shopping-advertising">Amazon Ads：Agentic shopping is here</a>】</p>
+          <h3>Meta：广告 AI 进入协同生产阶段</h3>
+          <p><span class="label">事实</span>Meta 在 Cannes Lions 2026 期间发布/强化一组 AI 营销能力，媒体可验证信息包括协作空间、brand memory、增强文本生成、翻译、与 WPP 的 agency 协作入口，以及 Creator Marketplace 与 Partnership Ads Hub 合并为 Meta Creator Marketing Hub。<span class="source">【来源】<a href="https://www.techradar.com/pro/meta-announces-end-to-end-suite-of-ai-advertising-and-marketing-tools-and-the-roi-so-far-is-staggering">TechRadar, 2026-06-24</a>；<a href="https://www.facebook.com/business/news/cannes-2026-cross-ai-threshold">Meta Business 官方页，访问需登录/可能受限</a></span></p>
+          <p><span class="label">数据</span>TechRadar 引用 Meta 官方博客称，广告主每 1 美元广告投入获得 4.13 美元收入回报，并称较 2022 年提升 25%；该数字来自平台方口径，应作为平台自报 ROI 信号，不应直接外推到单个账户。<span class="source">【来源】<a href="https://www.techradar.com/pro/meta-announces-end-to-end-suite-of-ai-advertising-and-marketing-tools-and-the-roi-so-far-is-staggering">TechRadar, 2026-06-24</a>；<a href="https://www.facebook.com/business/news/cannes-2026-cross-ai-threshold">Meta Business 官方页，访问需登录/可能受限</a></span></p>
         </article>
-
         <article class="card">
-          <div class="num">02</div>
-          <h3>TikTok 开始把创意洞察、视频生成、达人筛选统一交给 Agent</h3>
-          <p>TikTok For Business 2026-06-22 发布 Symphony Agent，明确其已接入 Symphony Creative Studio、Content Suite 和 TikTok One。官方写明，该工具可基于高表现广告、TikTok 趋势、品牌目标和品牌规范生成 brief、洞察报告、分镜和视频；平均约 3 分钟生成一条 12 秒视频、5 分钟生成一条 20 秒视频，并支持一次请求最多 3 个变体用于 A/B 测试。【性质：事实】【来源：<a href="https://ads.tiktok.com/business/en/blog/symphony-agent">TikTok：Introducing Symphony Agent</a>】</p>
-          <p>这说明 TikTok 的竞争点正在从“谁会做原生短视频”扩展到“谁能更快把趋势、达人、脚本、变体和复盘做成流水线”。创意团队如果还只按整条视频归档，而不是按 Hook、场景、角色、证明点、CTA 管理素材，放量速度会吃亏。【性质：推断】【来源：<a href="https://ads.tiktok.com/business/en/blog/symphony-agent">TikTok：Introducing Symphony Agent</a>；<a href="https://ads.tiktok.com/business/en/blog/tiktok-symphony-ai-creative-suite">TikTok：Symphony Creative Studio</a>】</p>
+          <h3>Reddit：把“社区验证”产品化</h3>
+          <p><span class="label">事实</span>Axios 6 月 22 日独家称，Reddit 在 Cannes 首日推出多项围绕 “community intelligence” 的广告产品，目标是把用户在 Reddit 做购买研究、验证推荐的行为转成广告机会；这是单一媒体来源，需后续验证。<span class="source">【来源】<a href="https://www.axios.com/2026/06/22/reddit-ads-shopping-community-intelligence">Axios, 2026-06-22</a></span></p>
+          <p><span class="label">案例观察</span>Vogue 2 月采访 Reddit COO Jen Wong 时写到，Reddit 广告可出现在 feed、subreddit 和评论区，且 Reddit 正在推进更多多媒体广告格式；这与 6 月 “community intelligence” 叙事一致，说明 Reddit 的差异化卖点是“真实讨论场景中的商品研究”。<span class="source">【来源】<a href="https://www.vogue.com/article/how-reddit-plans-to-be-the-antidote-to-ai-shopping">Vogue Business, 2026-02-17</a>；<a href="https://www.axios.com/2026/06/22/reddit-ads-shopping-community-intelligence">Axios, 2026-06-22</a></span></p>
         </article>
-
         <article class="card">
-          <div class="num">03</div>
-          <h3>Google 把创作者洞察与创意优化继续前置到投放阶段</h3>
-          <p>Google 2026-06-23 在 Cannes Lions 2026 公布新的 YouTube 广告洞察工具，包括美国市场更细粒度的 YouTube trending insights、整合进 Insights Finder 的 brand pulse 指标、面向合作伙伴的 Content &amp; Creator Insights API，以及将用于 YouTube Demand Gen 的 Gemini 创意建议。紧接着，Google 2026-06-25 在 June's Demand Gen Drop 里补充了更多视频尺寸转换、Gemini 创意建议和 web-to-app acquisition measurement。【性质：事实】【来源：<a href="https://blog.google/products/ads-commerce/youtube-insights-tools-cannes-lions-2026/">Google：YouTube insights tools at Cannes Lions 2026</a>；<a href="https://blog.google/products/ads-commerce/demand-gen-drop-june-2026/">Google：June's Demand Gen Drop</a>】</p>
-          <p>更稳妥的结论是：Google 正把“找对创作者/内容”和“把素材改到更适配版位”从人工判断，逐步变成广告平台内的标准动作。这不会自动替代创意判断，但会加速素材结构化和多版位适配的要求。【性质：推断】【来源：<a href="https://blog.google/products/ads-commerce/youtube-insights-tools-cannes-lions-2026/">Google：YouTube insights tools at Cannes Lions 2026</a>；<a href="https://blog.google/products/ads-commerce/demand-gen-drop-june-2026/">Google：June's Demand Gen Drop</a>】</p>
-        </article>
-
-        <article class="card">
-          <div class="num">04</div>
-          <h3>Reddit 在把“社区验证”正式产品化为购物广告链路</h3>
-          <p>Reddit 2026-06-22 在 Cannes 发布多项广告更新：Shopping Listing Ads（Alpha）会把参与品牌的商品与真实对话上下文匹配后以 carousel 形式展示；Redditor Highlights 已进入 GA，可把真实 Reddit 对话嵌入广告；free-form ad generator 进入 Beta，用品牌网站信息配对相关 Reddit 内容生成长帖式广告素材。【性质：事实】【来源：<a href="https://redditinc.com/news/live-from-cannes-2026-real-conversations-are-driving-the-new-consumer-decision-journey">Reddit：Cannes 2026 consumer decision journey</a>】</p>
-          <p>同一发布中，Reddit 援引其研究称，接近一半购物者会在购买前去 Reddit 验证 AI 生成推荐，且 1/4 redditors 会在决策被平台验证后立即购买；平台还披露，新六秒 engaged video views 优化目标在测试中带来 130% view-through rate 提升与 71% video completion rate 改善。【性质：数据】【来源：<a href="https://redditinc.com/news/live-from-cannes-2026-real-conversations-are-driving-the-new-consumer-decision-journey">Reddit：Cannes 2026 consumer decision journey</a>】</p>
-        </article>
-
-        <article class="card">
-          <div class="num">05</div>
-          <h3>Meta Business Agent 继续逼近“广告后成交”的基础设施层</h3>
-          <p>Meta 2026-06-03 宣布 Meta Business Agent 正向全球不同规模商家扩展。官方写明，Business Agent 可回答商家专属问题、基于目录做商品推荐、预约、筛线索、转人工并完成销售；Meta 同时称已有超过 100 万商家在 WhatsApp 和 Messenger 使用 Business Agent，WhatsApp、Messenger、Instagram 每天与商家的活跃 thread 超过 10 亿条。【性质：事实】【来源：<a href="https://about.fb.com/news/2026/06/meta-business-agent/">Meta：Business Agent</a>】</p>
-          <p>对跨境 DTC、线索型 SaaS、本地服务商家来说，这意味着广告点击后的会话承接会越来越像 CRM 和销售自动化的一部分，而不是附属客服。广告承诺、商品目录、FAQ 和人工接管规则需要统一维护。【性质：推断】【来源：<a href="https://about.fb.com/news/2026/06/meta-business-agent/">Meta：Business Agent</a>】</p>
-        </article>
-
-        <article class="card">
-          <div class="num">06</div>
-          <h3>Netflix 广告业务继续扩大可投放规模，并把 AI 用到素材适配</h3>
-          <p>Netflix 2026-05-13 在 Upfront 2026 写明，广告版订阅层目前已覆盖全球 2.5 亿月活观众，且超过 80% 的广告版订阅用户每周都会观看；Netflix 还表示，去年已开始用 AI 将广告主素材连接到剧集、电影和叙事世界，近期已与 DoorDash、Target、TurboTax 等合作测试，并计划在 2026 年底前扩展到所有支持广告版订阅的地区。【性质：事实】【来源：<a href="https://about.netflix.com/news/netflix-upfront-2026-get-closer">Netflix：Upfront 2026 Get Closer</a>】</p>
-          <p>Netflix 还预告移动端 vertical video 和 podcast 广告库存将在 2027 年面向全球开放。对 CTV 广告主来说，重点不是“AI 自动出片”本身，而是既有 TVC、短视频、静态 KV 是否能被快速拆解并适配成不同广告画布。【性质：事实 + 推断】【来源：<a href="https://about.netflix.com/news/netflix-upfront-2026-get-closer">Netflix：Upfront 2026 Get Closer</a>】</p>
+          <h3>CTV 零售媒体：Walmart 补自助投放能力</h3>
+          <p><span class="label">事实</span>WSJ 称 Walmart 6 月 23 日宣布收购 CTV 广告技术公司 Vibe.co，Vibe 重点服务中小广告主的联网电视投放；WSJ 报道交易价格为 14 亿美元，Walmart 公告未披露条款。<span class="source">【来源】<a href="https://www.wsj.com/business/retail/walmart-in-biggest-deal-in-two-years-buys-advertising-tech-firm-ccd6c03b">Wall Street Journal, 2026-06-23</a>；<a href="https://www.businessinsider.com/walmart-buying-vibe-co-stirs-buzz-cannes-lions-analysis-2026-6">Business Insider, 2026-06-24</a></span></p>
+          <p><span class="label">推断</span>对 DTC、App、游戏和区域品牌来说，CTV 的测试门槛会继续下降，但素材必须同时满足电视观看场景和数字归因：15/30 秒版本要有明确品牌露出、单一卖点和可记忆行动口令，落地页/优惠码/零售闭环要提前接好。<span class="source">【来源】<a href="https://www.businessinsider.com/walmart-buying-vibe-co-stirs-buzz-cannes-lions-analysis-2026-6">Business Insider, 2026-06-24</a>；<a href="https://www.ft.com/content/bc95ca91-0d97-4025-97cf-781f1964904e">Financial Times, 2026-06-26</a></span></p>
         </article>
       </div>
     </section>
 
     <section class="panel">
       <h2>新广告平台与 AI 原生广告</h2>
-      <p>本周最有代表性的“新平台”不是新 App，而是新的会话入口层：Amazon Alexa+ Agentic Ads 让广告在会话里完成发现、问答和购买；Meta Business Agent 让商家在 WhatsApp、Messenger、Instagram 上拥有接近销售助理的承接层；Reddit Shopping Listing Ads 让商品跟随真实讨论上下文出现；TikTok Symphony Agent 则把创意生成、内容检索和达人协作本身做成了 Agent 工作流。【性质：事实】【来源：<a href="https://advertising.amazon.com/library/news/alexa-agentic-ads">Amazon Ads：Alexa+ Agentic Ads</a>；<a href="https://about.fb.com/news/2026/06/meta-business-agent/">Meta：Business Agent</a>；<a href="https://redditinc.com/news/live-from-cannes-2026-real-conversations-are-driving-the-new-consumer-decision-journey">Reddit：Cannes 2026 consumer decision journey</a>；<a href="https://ads.tiktok.com/business/en/blog/symphony-agent">TikTok：Introducing Symphony Agent</a>】</p>
-      <p class="soft">这几类入口的共同约束是：它们都更依赖结构化商品信息、真实对话证据、可拆解的创意字段和更短的转化动作。如果你的目录、FAQ、素材库、达人内容授权和结算链路仍然割裂，AI 原生广告的放量会受限。【性质：推断】【来源：<a href="https://advertising.amazon.com/library/news/alexa-agentic-ads">Amazon Ads：Alexa+ Agentic Ads</a>；<a href="https://ads.tiktok.com/business/en/blog/symphony-agent">TikTok：Introducing Symphony Agent</a>；<a href="https://redditinc.com/news/live-from-cannes-2026-real-conversations-are-driving-the-new-consumer-decision-journey">Reddit：Cannes 2026 consumer decision journey</a>】</p>
+      <p><span class="label">事实</span>Google 已在 AI Mode 和 AI Overviews 相关搜索场景中测试广告；Washington Post 1 月写到，Google 向广告主展示了 AI Mode 内的优惠券/Direct Offers 示例，Google 称付费优惠不会影响 AI 生成信息本身。<span class="source">【来源】<a href="https://www.washingtonpost.com/technology/2026/01/13/advertising-google-ai-mode-chatgpt/">Washington Post, 2026-01-13</a>；<a href="https://www.businessinsider.com/google-vp-says-ads-arent-coming-to-gemini-yet-why-2026-1">Business Insider, 2026-01-14</a></span></p>
+      <p><span class="label">事实</span>Google 全球广告 VP Dan Taylor 在 1 月 Business Insider 采访中称，Google 当时没有计划在 Gemini app 内投放广告，优先把广告放在 AI 搜索；同文称广告主不能单独购买 AI Mode 或 AI Overviews 版位，而是由算法按定位变量决定展示。<span class="source">【来源】<a href="https://www.businessinsider.com/google-vp-says-ads-arent-coming-to-gemini-yet-why-2026-1">Business Insider, 2026-01-14</a></span></p>
+      <p><span class="label">数据</span>一篇 2026 年 5 月 arXiv 论文在 2026 年 3 月 13 日至 4 月 21 日对 55,393 个趋势查询进行测量，报告 Google AI Overviews 总体触发率为 13.7%，问题型查询触发率为 64.7%，并指出 98,020 个原子声明中 11.0% 未被引用页支撑；这是学术预印本，应用于投放时应作为风险提示而非平台官方数据。<span class="source">【来源】<a href="https://arxiv.org/abs/2605.14021">arXiv: Measuring Google AI Overviews, 2026-05</a></span></p>
+      <p><span class="label">推断</span>AI 搜索广告的核心变量会从“关键词买量”转向“是否出现在购买任务链里”：品牌需要把商品页、FAQ、评测、优惠、库存和售后政策做成可被 AI 引用和用户点击验证的资产。<span class="source">【来源】<a href="https://www.washingtonpost.com/technology/2026/01/13/advertising-google-ai-mode-chatgpt/">Washington Post, 2026-01-13</a>；<a href="https://arxiv.org/abs/2605.14021">arXiv: Measuring Google AI Overviews, 2026-05</a></span></p>
     </section>
 
     <section class="panel">
       <h2>广告素材与创意资产</h2>
-      <h3>1. 素材平台 / 工具动态</h3>
-      <p>TikTok Symphony Agent 已把 brief、趋势、脚本、分镜、视频生成、内容检索和达人筛选串进一条工作流；Google 正在给 Demand Gen 增加更多视频尺寸转换、Gemini 创意建议和 web-to-app 测量；Amazon 6 月 23 日的 Alexa+ Agentic Ads 与 6 月 11 日的 agentic shopping 更新，则把广告素材直接推进到会话与购买动作里。【性质：事实】【来源：<a href="https://ads.tiktok.com/business/en/blog/symphony-agent">TikTok：Introducing Symphony Agent</a>；<a href="https://blog.google/products/ads-commerce/demand-gen-drop-june-2026/">Google：June's Demand Gen Drop</a>；<a href="https://advertising.amazon.com/library/news/alexa-agentic-ads">Amazon Ads：Alexa+ Agentic Ads</a>；<a href="https://advertising.amazon.com/library/news/agentic-shopping-advertising">Amazon Ads：Agentic shopping is here</a>】</p>
-
-      <h3>2. 素材趋势 / 格式变化</h3>
-      <p>这一周最明显的变化是，素材不再只是一段视频或一张图，而更像一组可被系统调用的模块：问题、场景、证明点、反对意见处理、优惠、CTA、下一步动作。TikTok 的 Agent 在学习高表现 Hook 和 CTA；Reddit 在把真实社区讨论变成广告证明；Netflix 在把既有广告主素材适配到不同内容宇宙与画布；Amazon 则把商品问答和购买动作放进对话里。【性质：事实 + 推断】【来源：<a href="https://ads.tiktok.com/business/en/blog/symphony-agent">TikTok：Introducing Symphony Agent</a>；<a href="https://redditinc.com/news/live-from-cannes-2026-real-conversations-are-driving-the-new-consumer-decision-journey">Reddit：Cannes 2026 consumer decision journey</a>；<a href="https://about.netflix.com/news/netflix-upfront-2026-get-closer">Netflix：Upfront 2026 Get Closer</a>；<a href="https://advertising.amazon.com/library/news/alexa-agentic-ads">Amazon Ads：Alexa+ Agentic Ads</a>】</p>
-
-      <h3>3. 可执行素材测试建议</h3>
-      <ul>
-        <li>先把素材资产按 10 个字段拆分：Hook、前 3 秒画面、人物角色、使用场景、产品露出、核心证明点、反对意见处理、价格/优惠、CTA、落地页承接。每轮只替换 2-3 个字段，适合 TikTok Symphony Agent 的高变体节奏，也更适配 Google Demand Gen 的多尺寸扩展。【性质：推断】【来源：<a href="https://ads.tiktok.com/business/en/blog/symphony-agent">TikTok：Introducing Symphony Agent</a>；<a href="https://blog.google/products/ads-commerce/demand-gen-drop-june-2026/">Google：June's Demand Gen Drop</a>】</li>
-        <li>并行测试三类 Hook：痛点提问、错误选法、具体人群场景；中段证明点分别测试真实评价、参数对比、价格/优惠、履约速度与售后承诺。原因是 Amazon、Reddit、Meta 这类入口都在放大“可被解释和验证的证据”。【性质：推断】【来源：<a href="https://advertising.amazon.com/library/news/alexa-agentic-ads">Amazon Ads：Alexa+ Agentic Ads</a>；<a href="https://redditinc.com/news/live-from-cannes-2026-real-conversations-are-driving-the-new-consumer-decision-journey">Reddit：Cannes 2026 consumer decision journey</a>；<a href="https://about.fb.com/news/2026/06/meta-business-agent/">Meta：Business Agent</a>】</li>
-        <li>落地页和会话 FAQ 的首屏要先补齐：适合谁、为什么比替代品更好、价格与优惠、配送/预约方式、退换政策、CTA。这样做不是为了页面更长，而是为了让 Agent、广告系统和用户读取的是同一套决策证据。【性质：推断】【来源：<a href="https://about.fb.com/news/2026/06/meta-business-agent/">Meta：Business Agent</a>；<a href="https://advertising.amazon.com/library/news/agentic-shopping-advertising">Amazon Ads：Agentic shopping is here</a>】</li>
-      </ul>
+      <h3>素材平台/工具动态</h3>
+      <p><span class="label">事实</span>Meta 的新一轮 AI 广告能力把 product catalog、brand assets、creative materials 作为 AI 优化上下文，说明素材管理正在从“上传几条视频”变成“提供可组合的品牌记忆、产品事实和变体素材库”。<span class="source">【来源】<a href="https://www.techradar.com/pro/meta-announces-end-to-end-suite-of-ai-advertising-and-marketing-tools-and-the-roi-so-far-is-staggering">TechRadar, 2026-06-24</a>；<a href="https://www.facebook.com/business/news/cannes-2026-cross-ai-threshold">Meta Business 官方页，访问需登录/可能受限</a></span></p>
+      <p><span class="label">数据</span>IAB 相关报道显示，美国 creator economy 广告支出从 2021 年 139 亿美元增长到 2024 年 295 亿美元，并预计 2025 年达到 370 亿美元；Business Insider 6 月报道引用 IAB 4 月报告称 2026 年美国 creator ad spend 预计达到 440 亿美元。<span class="source">【来源】<a href="https://www.tvtechnology.com/news/iab-creator-economy-ad-spend-now-dwarfs-ad-spend-for-total-media-industry">TVTechnology 对 IAB 报告的报道, 2025-11</a>；<a href="https://www.businessinsider.com/cannes-lions-recap-creativity-ai-creators-2026-6">Business Insider, 2026-06-26</a></span></p>
+      <h3>素材趋势或格式变化</h3>
+      <p><span class="label">案例观察</span>Cannes 现场讨论里，创作者不只是“分发渠道”，而是在产品、脚本、文化语境和评论区反馈中影响创意方向；Business Insider 6 月 21 日报道提到超过 250 名创作者预计参加 Cannes，且品牌开始用 “creator commerce” 描述这种关系。<span class="source">【来源】<a href="https://www.businessinsider.com/creators-take-over-cannes-lions-advertising-biggest-bash-2026-6">Business Insider, 2026-06-21</a>；<a href="https://www.businessinsider.com/creator-influencer-marketing-creative-freedom-ads-2026-6">Business Insider, 2026-06-23</a></span></p>
+      <p><span class="label">推断</span>素材结构要从“品牌统一话术”改为“可被创作者演绎的限制条件”：给创作者明确不可变事实、证明点、禁用说法、落地页承接和 CTA，Hook、前 3 秒画面、生活场景、语气和冲突桥段交给创作者做本地化。<span class="source">【来源】<a href="https://www.businessinsider.com/creator-influencer-marketing-creative-freedom-ads-2026-6">Business Insider, 2026-06-23</a>；<a href="https://www.businessinsider.com/cannes-lions-recap-creativity-ai-creators-2026-6">Business Insider, 2026-06-26</a></span></p>
+      <h3>可执行素材测试建议</h3>
+      <ol>
+        <li><span class="label">推断</span>Hook 测试：同一产品拍 4 个首帧，分别是“痛点结果图”“真实用户开箱”“价格/优惠对比”“反常识提问”，每个首帧保持产品在 1 秒内出现，避免 AI 批量生成后产品不真实或主张过强。<span class="source">【来源】<a href="https://www.businessinsider.com/cannes-lions-recap-creativity-ai-creators-2026-6">Business Insider, 2026-06-26</a>；<a href="https://www.techradar.com/pro/meta-announces-end-to-end-suite-of-ai-advertising-and-marketing-tools-and-the-roi-so-far-is-staggering">TechRadar, 2026-06-24</a></span></li>
+        <li><span class="label">推断</span>脚本测试：用 20-30 秒短视频拆成“场景触发、旧方案失败、产品演示、信任证明、反对意见处理、CTA”六段；每次只替换一个变量，例如证明点从媒体背书换成评论区截图，CTA 从折扣换成测评页。<span class="source">【来源】<a href="https://www.businessinsider.com/creator-influencer-marketing-creative-freedom-ads-2026-6">Business Insider, 2026-06-23</a>；<a href="https://www.vogue.com/article/how-reddit-plans-to-be-the-antidote-to-ai-shopping">Vogue Business, 2026-02-17</a></span></li>
+        <li><span class="label">推断</span>落地页承接：AI 搜索和 Reddit 研究型流量应落到“答案型页面”，页面首屏要有购买问题、规格比较、真实评价、退换/配送和优惠说明；CTV 和 creator 视频流量则保留短链、口令码或专属集合页，便于归因。<span class="source">【来源】<a href="https://www.washingtonpost.com/technology/2026/01/13/advertising-google-ai-mode-chatgpt/">Washington Post, 2026-01-13</a>；<a href="https://www.businessinsider.com/walmart-buying-vibe-co-stirs-buzz-cannes-lions-analysis-2026-6">Business Insider, 2026-06-24</a></span></li>
+      </ol>
     </section>
 
     <section class="panel">
       <h2>案例深拆</h2>
-      <div class="meta">案例 1 / 海外优先</div>
-      <h3>Gucci × Snapchat Sponsored AI Lens</h3>
-      <p>品牌 / 产品：Snap 2026-02-09 公布，Gucci 推出奢侈品行业首个 Sponsored AI Lens，围绕 Gucci La Famiglia 角色体系展开，并提到 Lunetta 包款露出；Gucci 官网可交叉验证 La Famiglia Collection 与 Lunetta 商品页存在。【性质：事实】【来源：<a href="https://newsroom.snap.com/gucci-sponsored-ai-lens">Snap：Gucci Sponsored AI Lens</a>；<a href="https://www.gucci.com/us/en/nst/la-famiglia-collection">Gucci：La Famiglia Collection</a>；<a href="https://www.gucci.com/us/en/pr/-p-863406FAFV99653">Gucci：Lunetta small crossbody bag</a>】</p>
-      <p>人群与场景：该广告更适合愿意自拍、变装、分享的 Snapchat 社交人群。Snap 把 Sponsored AI Lenses 定义为由生成式 AI 驱动的互动广告格式，因此它更偏品牌参与和社交传播，而不是短链路成交。【性质：案例观察】【来源：<a href="https://newsroom.snap.com/gucci-sponsored-ai-lens">Snap：Gucci Sponsored AI Lens</a>；<a href="https://newsroom.snap.com/sponsored-ai-lenses">Snap：Introducing Sponsored AI Lenses</a>】</p>
-      <p>商业目标：公开来源未披露 KPI 或销售数字；基于格式和品牌语境，更稳妥的判断是测试 AI 沉浸式体验对品牌参与、分享和系列认知的作用，不能写成确定销售增长。【性质：推断】【来源：<a href="https://newsroom.snap.com/gucci-sponsored-ai-lens">Snap：Gucci Sponsored AI Lens</a>；<a href="https://www.gucci.com/us/en/nst/la-famiglia-collection">Gucci：La Famiglia Collection</a>】</p>
-      <p>核心洞察：Gucci 不是把 AI 只当成后台出图工具，而是把 AI 做成用户可进入的品牌世界观。对视觉资产强、角色识别强的品牌，这是一条“让用户自己成为素材”的互动路径。【性质：推断】【来源：<a href="https://newsroom.snap.com/gucci-sponsored-ai-lens">Snap：Gucci Sponsored AI Lens</a>；<a href="https://newsroom.snap.com/sponsored-ai-lenses">Snap：Introducing Sponsored AI Lenses</a>】</p>
-      <p>广告素材拆解：当前能验证的 Hook 是“用户被转化为 Gucci La Famiglia 角色”；画面机制是 AI 角色化与品牌符号植入；产品露出包括 Lunetta 与 Gucci 视觉识别；信任证明来自 Gucci 官方 IP 与 Snap 官方广告格式；CTA 更接近体验与分享。由于未见完整逐帧公开视频，不编造镜头顺序和具体台词。【性质：事实 + 案例观察】【来源：<a href="https://newsroom.snap.com/gucci-sponsored-ai-lens">Snap：Gucci Sponsored AI Lens</a>；<a href="https://www.gucci.com/us/en/pr/-p-863406FAFV99653">Gucci：Lunetta 商品页</a>】</p>
-      <p>媒介 / 平台组合与转化路径：公开能确认的是 Snapchat Lens 互动体验与 Gucci 自有系列页、商品页并存；未见品牌或平台公开完整媒体组合，因此保守写法只能是“互动体验 - 社交分享 - 品牌兴趣 - 官网浏览”，不能写成确定成交漏斗。【性质：事实 + 推断】【来源：<a href="https://newsroom.snap.com/gucci-sponsored-ai-lens">Snap：Gucci Sponsored AI Lens</a>；<a href="https://www.gucci.com/us/en/nst/la-famiglia-collection">Gucci：La Famiglia Collection</a>】</p>
-      <p>结果信号：当前公开信息未见可验证的曝光、分享、转化或销售数字，因此结果只能写“未见公开可验证结果”；可确认信号是 Snap 将其定义为奢侈品行业首个 Sponsored AI Lens。【性质：事实】【来源：<a href="https://newsroom.snap.com/gucci-sponsored-ai-lens">Snap：Gucci Sponsored AI Lens</a>】</p>
-      <p>可复用打法、风险与本地化注意点：先定义用户愿意代入的身份角色，再把品牌世界观和产品符号嵌进身份体验，最后让分享本身成为传播动作。适合时尚、美妆、娱乐 IP 和强视觉消费品；风险在于角色隐喻、服饰符号和身份语言若不能被本地用户快速识别，AI Lens 很容易退化成一次性滤镜。【性质：推断】【来源：<a href="https://newsroom.snap.com/gucci-sponsored-ai-lens">Snap：Gucci Sponsored AI Lens</a>；<a href="https://newsroom.snap.com/sponsored-ai-lenses">Snap：Introducing Sponsored AI Lenses</a>】</p>
+      <h3>Chipotle “Tatted Up Like a Chipotle Bag” Friday the 13th BOGO</h3>
+      <p><span class="label">案例观察</span><strong>品牌/产品：</strong>Chipotle 墨西哥快餐；<strong>人群与场景：</strong>有纹身、愿意参与线下限时活动、熟悉 Friday the 13th flash tattoo 文化和 Chipotle bag 梗的美国/北美年轻消费者。<span class="source">【来源】<a href="https://www.houstonchronicle.com/news/houston-texas/trending/article/chipotle-bogo-offer-22070629.php">Houston Chronicle, 2026-03-11</a>；<a href="https://www.ctinsider.com/food/article/chipotle-tattoo-bogo-friday-the-13th-deal-22072407.php">CT Insider, 2026-03-12</a></span></p>
+      <p><span class="label">事实</span><strong>商业目标：</strong>用 1 小时线下 BOGO 把社交梗转成到店客流；公开信息显示活动在 2026 年 3 月 13 日 3-4 p.m. 本地时间进行，顾客展示真实、临时、手绘或其他店员认可的纹身即可参与，单次结账最多 5 个免费主餐，需购买同等或更高价值主餐。<span class="source">【来源】<a href="https://www.ctinsider.com/food/article/chipotle-tattoo-bogo-friday-the-13th-deal-22072407.php">CT Insider, 2026-03-12</a>；<a href="https://people.com/wendy-free-fries-friday-the-13th-11924939">People, 2026-03-12</a></span></p>
+      <p><span class="label">案例观察</span><strong>核心洞察：</strong>“Tatted like a Chipotle bag” 来自 Adam Levine 2019 Super Bowl 半场秀后出现的网络梗，品牌把外部调侃转成粉丝身份标签，再与 Friday the 13th tattoo flash sheet 文化结合；Houston Chronicle 引用 Chipotle 临时 CMO Stephanie Perdue 的说法称，这一活动把互联网 meme 变成了品牌粉丝的现实表达。<span class="source">【来源】<a href="https://www.houstonchronicle.com/news/houston-texas/trending/article/chipotle-bogo-offer-22070629.php">Houston Chronicle, 2026-03-11</a>；<a href="https://www.ctinsider.com/food/article/chipotle-tattoo-bogo-friday-the-13th-deal-22072407.php">CT Insider, 2026-03-12</a></span></p>
+      <p><span class="label">推断</span><strong>创意概念与素材拆解：</strong>可验证公开报道未提供完整广告视频画面，因此不编造具体镜头；从活动机制可拆出素材骨架：首帧/Hook 是“有纹身就 BOGO”的反常识利益点，文案机制是把“像 Chipotle 袋子的纹身”变成参与口令，产品露出由门店主餐与 Chipotle bag 视觉承接，信任证明来自品牌官方新闻稿被多家媒体转述，CTA 是 3-4 p.m. 到店展示纹身。<span class="source">【来源】<a href="https://www.houstonchronicle.com/news/houston-texas/trending/article/chipotle-bogo-offer-22070629.php">Houston Chronicle, 2026-03-11</a>；<a href="https://www.ctinsider.com/food/article/chipotle-tattoo-bogo-friday-the-13th-deal-22072407.php">CT Insider, 2026-03-12</a></span></p>
+      <p><span class="label">事实</span><strong>媒介/平台组合与转化路径：</strong>公开报道可验证的路径是新闻稿/媒体扩散 + 线下门店兑换；People 报道称活动覆盖美国、加拿大、英国、法国和德国参与门店，CT Insider 报道称排除 catering、mobile、online 和 delivery。<span class="source">【来源】<a href="https://people.com/wendy-free-fries-friday-the-13th-11924939">People, 2026-03-12</a>；<a href="https://www.ctinsider.com/food/article/chipotle-tattoo-bogo-friday-the-13th-deal-22072407.php">CT Insider, 2026-03-12</a></span></p>
+      <p><span class="label">案例观察</span><strong>结果信号：</strong>NY Post 在 Cannes 现场报道中引用 Day One Agency CEO Josh Rosenberg 称，这个 1 小时 tattoo BOGO 是 Chipotle 最好的销售日之一；这是单一媒体中的代理商说法，未见公开可验证销售数字，需后续验证。<span class="source">【来源】<a href="https://nypost.com/2026/06/22/media/media-tech-and-advertising-elite-return-to-cannes-lions-festival/">New York Post, 2026-06-22</a></span></p>
+      <p><span class="label">推断</span><strong>可复用打法：</strong>适合海外消费品牌复用的是“文化日历 + 粉丝梗 + 低门槛证明动作 + 限时线下兑换”；风险是梗的归属和文化语境必须本地化，纹身、身体展示、员工判定资格等机制在不同市场可能引发歧视或执行争议。<span class="source">【来源】<a href="https://www.houstonchronicle.com/news/houston-texas/trending/article/chipotle-bogo-offer-22070629.php">Houston Chronicle, 2026-03-11</a>；<a href="https://people.com/wendy-free-fries-friday-the-13th-11924939">People, 2026-03-12</a></span></p>
     </section>
 
     <section class="panel">
       <h2>国内打法补充</h2>
-      <p>SocialBeta 2026-05-21 的案例稿显示，抖音生活服务“龙虾季”把小龙虾从餐饮促销物料改写成健身、开放麦、夜宵等年轻社交场景，再用团购承接成交。对海外本地生活、餐饮和即时零售更可迁移的不是“小龙虾”本身，而是“先做场景内容化，再做优惠与履约承接”的组合。由于当前可见公开依据主要为单一媒体案例稿，本条只作案例观察，不当作确定性结论。【性质：案例观察；单一来源，需后续验证】【来源：<a href="https://socialbeta.com/campaign/27567">SocialBeta：这一届小龙虾营销，终于开始懂年轻人了</a>】</p>
+      <p><span class="label">案例观察</span>小红书的“种草笔记 + 搜索”机制可作为海外 Reddit/AI search 的打法参照：用户不是先看广告再购买，而是在生活问题、产品对比和真实体验中做搜索式决策；公开百科资料把小红书描述为以瀑布流笔记、产品评测、旅游目的地文字介绍和搜索标记为核心的社区。<span class="source">【来源】<a href="https://zh.wikipedia.org/wiki/%E5%B0%8F%E7%BA%A2%E4%B9%A6">维基百科：小红书，抓取于 2026-06</a>；<a href="https://www.vogue.com/article/how-reddit-plans-to-be-the-antidote-to-ai-shopping">Vogue Business, 2026-02-17</a></span></p>
+      <p><span class="label">推断</span>可迁移做法不是照搬“种草”话术，而是建立“搜索前置素材库”：每个主推 SKU 配 10-20 条用户问题型内容，例如“适合谁”“和竞品差异”“第一次使用会不会踩坑”“物流/退换怎么处理”，再把这些内容改写为 Reddit 回答、Google AI search 可引用 FAQ 和创作者脚本。<span class="source">【来源】<a href="https://zh.wikipedia.org/wiki/%E5%B0%8F%E7%BA%A2%E4%B9%A6">维基百科：小红书，抓取于 2026-06</a>；<a href="https://arxiv.org/abs/2605.14021">arXiv: Measuring Google AI Overviews, 2026-05</a></span></p>
     </section>
 
     <section class="panel">
       <h2>今日可执行小实验</h2>
-      <ul>
-        <li>Amazon / 电商：抽 20 个核心 SKU，逐项检查标题、卖点、FAQ、评价摘要、价格与优惠说明，确认它们能直接回答“适合谁、为什么选你、现在为什么值得买、怎么买”。这相当于在为 Alexa for Shopping 和 Agentic Ads 准备可调用答案。【性质：推断】【来源：<a href="https://advertising.amazon.com/library/news/alexa-agentic-ads">Amazon Ads：Alexa+ Agentic Ads</a>；<a href="https://advertising.amazon.com/library/news/agentic-shopping-advertising">Amazon Ads：Agentic shopping is here</a>】</li>
-        <li>TikTok / 短视频：把 10 条近 30 天高点击素材拆成字段表，先只替换 Hook、证明点和 CTA 三列，做一轮低成本变体测试，再把结果喂回下一轮脚本。这样更贴近 Symphony Agent 的工作方式。【性质：推断】【来源：<a href="https://ads.tiktok.com/business/en/blog/symphony-agent">TikTok：Introducing Symphony Agent</a>】</li>
-        <li>Google / YouTube：把你现在的 Demand Gen 素材按竖版、方版、横版分别盘点，并记录哪些素材没有可扩展画面空间。Demand Gen 已在继续扩充尺寸转换与 Gemini 创意建议，不预留安全裁切区的素材会吃亏。【性质：推断】【来源：<a href="https://blog.google/products/ads-commerce/demand-gen-drop-june-2026/">Google：June's Demand Gen Drop</a>；<a href="https://blog.google/products/ads-commerce/youtube-insights-tools-cannes-lions-2026/">Google：YouTube insights tools at Cannes Lions 2026</a>】</li>
-      </ul>
+      <p class="experiment"><span class="label">推断</span><strong>实验 1：AI 搜索承接页。</strong>选一个高意图问题词，例如 “best [category] for small apartment / sensitive skin / remote teams”，新建答案型 landing page：首屏直接回答、第二屏产品对比、第三屏真实评价/UGC、第四屏优惠与退换；用 Search/Performance Max 或现有 SEO 流量观察查询词、停留、加入购物车和转化。<span class="source">【来源】<a href="https://www.washingtonpost.com/technology/2026/01/13/advertising-google-ai-mode-chatgpt/">Washington Post, 2026-01-13</a>；<a href="https://arxiv.org/abs/2605.14021">arXiv: Measuring Google AI Overviews, 2026-05</a></span></p>
+      <p class="experiment"><span class="label">推断</span><strong>实验 2：Creator brief 松绑。</strong>同一产品找 3 位 micro creator，只固定产品事实、禁用 claim、证明点和 CTA，不固定 Hook；让每人交 2 个版本，一个“个人故事”，一个“反对意见处理”，比较 3 秒留存、点击率和评论中的购买问题。<span class="source">【来源】<a href="https://www.businessinsider.com/creator-influencer-marketing-creative-freedom-ads-2026-6">Business Insider, 2026-06-23</a>；<a href="https://www.businessinsider.com/creators-take-over-cannes-lions-advertising-biggest-bash-2026-6">Business Insider, 2026-06-21</a></span></p>
+      <p class="experiment"><span class="label">推断</span><strong>实验 3：Reddit 研究链路。</strong>不要直接硬广进入社区，先抓取 20 个与品类相关的真实购买问题，整理成“异议词表”和“证明点词表”，再投放/发布价值型内容或评论区答疑，把落地页改成回答这些问题的结构。<span class="source">【来源】<a href="https://www.vogue.com/article/how-reddit-plans-to-be-the-antidote-to-ai-shopping">Vogue Business, 2026-02-17</a>；<a href="https://www.axios.com/2026/06/22/reddit-ads-shopping-community-intelligence">Axios, 2026-06-22</a></span></p>
     </section>
 
-    <section class="panel">
+    <section class="panel warn">
       <h2>待验证线索</h2>
-      <p class="warn">关于“更多通用 AI 助手即将开放自助广告平台”的市场讨论仍存在，但若当前只能找到单一媒体报道，且缺少公司公告、产品页、帮助中心、财报或投资者材料支撑，本期不进入今日重点、案例拆解或结论。这里保留一个样本线索，后续只有在出现一手确认后才升级为重点判断。【性质：推断；单一来源，需后续验证】【来源：<a href="https://www.axios.com/2026/05/05/openai-self-serve-ad-platform">Axios：OpenAI launches self-serve ad platform</a>】</p>
+      <ul>
+        <li><span class="label">待验证</span>Amazon 在 ChatGPT 内投放首批广告、并把流量导回 Amazon marketplace 的说法目前主要来自 Business Insider 单一媒体报道；未找到 Amazon 或 OpenAI 官方公告，本期不纳入重点结论。<span class="source">【来源】<a href="https://www.businessinsider.com/amazon-first-chatgpt-ads-ai-strategy-openai-data-2026-6">Business Insider, 2026-06，单一来源，需后续验证</a></span></li>
+        <li><span class="label">待验证</span>AXA France “Three Words” 获 Cannes Creative Effectiveness Grand Prix 的信息见 Business Insider Cannes 复盘，但未在本次检索中找到可直接交叉验证的 Cannes 官方获奖页或 AXA 官方案例页，因此不做案例深拆。<span class="source">【来源】<a href="https://www.businessinsider.com/cannes-lions-recap-creativity-ai-creators-2026-6">Business Insider, 2026-06-26，单一来源，需后续验证</a></span></li>
+        <li><span class="label">待验证</span>TikTok Symphony/Smart+ 在 2026 Cannes 的新增广告产品，本次公开检索没有找到可访问的一手页面；后续如 TikTok for Business 发布官方说明，再进入 AI 创意工具跟踪。<span class="source">【来源】本次未找到可直接支撑链接，暂不进入正文结论。</span></li>
+      </ul>
     </section>
 
     <section class="panel">
       <h2>来源索引</h2>
-      <ul class="sources">
-        <li><a href="https://advertising.amazon.com/library/news/alexa-agentic-ads">Amazon Ads：Order a pizza or buy concert tickets: New Alexa+ Agentic Ads let shoppers purchase directly within an ad</a></li>
-        <li><a href="https://advertising.amazon.com/library/news/agentic-shopping-advertising">Amazon Ads：Agentic shopping is here. What does that mean for advertisers?</a></li>
-        <li><a href="https://ads.tiktok.com/business/en/blog/symphony-agent">TikTok For Business：Introducing Symphony Agent</a></li>
-        <li><a href="https://ads.tiktok.com/business/en/blog/tiktok-symphony-ai-creative-suite">TikTok For Business：Meet TikTok Symphony, Our New Creative AI Suite</a></li>
-        <li><a href="https://blog.google/products/ads-commerce/youtube-insights-tools-cannes-lions-2026/">Google：Cannes Lions 2026: Strengthen creative campaigns with new tools from YouTube</a></li>
-        <li><a href="https://blog.google/products/ads-commerce/demand-gen-drop-june-2026/">Google：Elevate your campaign performance with June’s Demand Gen Drop</a></li>
-        <li><a href="https://about.fb.com/news/2026/06/meta-business-agent/">Meta：Be There for Every Customer With Meta Business Agent</a></li>
-        <li><a href="https://redditinc.com/news/live-from-cannes-2026-real-conversations-are-driving-the-new-consumer-decision-journey">Reddit：Live from Cannes 2026: Real Conversations are Driving the New Consumer Decision Journey</a></li>
-        <li><a href="https://about.netflix.com/news/netflix-upfront-2026-get-closer">Netflix：Upfront 2026 Get Closer</a></li>
-        <li><a href="https://newsroom.snap.com/gucci-sponsored-ai-lens">Snap：Gucci Sponsored AI Lens</a></li>
-        <li><a href="https://newsroom.snap.com/sponsored-ai-lenses">Snap：Introducing Sponsored AI Lenses</a></li>
-        <li><a href="https://www.gucci.com/us/en/nst/la-famiglia-collection">Gucci：La Famiglia Collection</a></li>
-        <li><a href="https://www.gucci.com/us/en/pr/-p-863406FAFV99653">Gucci：Lunetta small crossbody bag</a></li>
-        <li><a href="https://socialbeta.com/campaign/27567">SocialBeta：这一届小龙虾营销，终于开始懂年轻人了</a></li>
-        <li><a href="https://www.axios.com/2026/05/05/openai-self-serve-ad-platform">Axios：OpenAI launches self-serve ad platform</a></li>
-      </ul>
+      <ol class="index">
+        <li><a href="https://www.techradar.com/pro/meta-announces-end-to-end-suite-of-ai-advertising-and-marketing-tools-and-the-roi-so-far-is-staggering">TechRadar: Meta announces end-to-end AI advertising tools, 2026-06-24</a></li>
+        <li><a href="https://www.facebook.com/business/news/cannes-2026-cross-ai-threshold">Meta Business: Cannes 2026 cross AI threshold, 官方页访问可能受限</a></li>
+        <li><a href="https://www.axios.com/2026/06/22/reddit-ads-shopping-community-intelligence">Axios: Reddit expands community intelligence ad strategy, 2026-06-22</a></li>
+        <li><a href="https://www.vogue.com/article/how-reddit-plans-to-be-the-antidote-to-ai-shopping">Vogue Business: How Reddit Plans to Be the Antidote to AI Shopping, 2026-02-17</a></li>
+        <li><a href="https://www.wsj.com/business/retail/walmart-in-biggest-deal-in-two-years-buys-advertising-tech-firm-ccd6c03b">WSJ: Walmart buys advertising tech firm Vibe.co, 2026-06-23</a></li>
+        <li><a href="https://www.businessinsider.com/walmart-buying-vibe-co-stirs-buzz-cannes-lions-analysis-2026-6">Business Insider: Walmart buying Vibe.co, 2026-06-24</a></li>
+        <li><a href="https://www.ft.com/content/bc95ca91-0d97-4025-97cf-781f1964904e">Financial Times: Walmart's ad deal, 2026-06-26</a></li>
+        <li><a href="https://www.washingtonpost.com/technology/2026/01/13/advertising-google-ai-mode-chatgpt/">Washington Post: Advertising in AI chatbots and Google AI Mode, 2026-01-13</a></li>
+        <li><a href="https://www.businessinsider.com/google-vp-says-ads-arent-coming-to-gemini-yet-why-2026-1">Business Insider: Google VP on AI search ads and Gemini, 2026-01-14</a></li>
+        <li><a href="https://arxiv.org/abs/2605.14021">arXiv: Measuring Google AI Overviews, 2026-05</a></li>
+        <li><a href="https://www.businessinsider.com/cannes-lions-recap-creativity-ai-creators-2026-6">Business Insider: Cannes Lions 2026 recap, 2026-06-26</a></li>
+        <li><a href="https://www.businessinsider.com/creators-take-over-cannes-lions-advertising-biggest-bash-2026-6">Business Insider: Creators take over Cannes, 2026-06-21</a></li>
+        <li><a href="https://www.businessinsider.com/creator-influencer-marketing-creative-freedom-ads-2026-6">Business Insider: Let creators get experimental, 2026-06-23</a></li>
+        <li><a href="https://www.tvtechnology.com/news/iab-creator-economy-ad-spend-now-dwarfs-ad-spend-for-total-media-industry">TVTechnology: IAB creator economy ad spend report coverage, 2025-11</a></li>
+        <li><a href="https://www.houstonchronicle.com/news/houston-texas/trending/article/chipotle-bogo-offer-22070629.php">Houston Chronicle: Chipotle tattoo BOGO, 2026-03-11</a></li>
+        <li><a href="https://www.ctinsider.com/food/article/chipotle-tattoo-bogo-friday-the-13th-deal-22072407.php">CT Insider: Chipotle Friday the 13th BOGO details, 2026-03-12</a></li>
+        <li><a href="https://people.com/wendy-free-fries-friday-the-13th-11924939">People: Friday the 13th food promotions including Chipotle, 2026-03-12</a></li>
+        <li><a href="https://nypost.com/2026/06/22/media/media-tech-and-advertising-elite-return-to-cannes-lions-festival/">New York Post: Cannes Lions 2026 media and ad elite, 2026-06-22</a></li>
+        <li><a href="https://zh.wikipedia.org/wiki/%E5%B0%8F%E7%BA%A2%E4%B9%A6">维基百科：小红书</a></li>
+      </ol>
     </section>
   </main>
-
-  <footer class="wrap">本页所有具体平台动作、数字与案例结论均在正文逐条标注来源；“推断”均基于同条列示来源，不作为独立事实陈述。</footer>
 </body>
 </html>
