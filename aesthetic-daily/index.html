@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>今日审美练习</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow" id="dateLabel">Daily Aesthetic</p>
+          <h1>今日审美练习</h1>
+        </div>
+        <div class="toolbar" aria-label="页面操作">
+          <button class="icon-button" id="refreshButton" type="button" title="重新抓取今日作品" aria-label="重新抓取今日作品">
+            <span aria-hidden="true">↻</span>
+          </button>
+          <button class="icon-button" id="randomButton" type="button" title="随机练习" aria-label="随机练习">
+            <span aria-hidden="true">◈</span>
+          </button>
+        </div>
+      </header>
+
+      <section class="status-panel" aria-live="polite">
+        <div>
+          <span class="status-kicker">开放馆藏</span>
+          <strong id="statusText">准备抓取 10 张高清作品</strong>
+        </div>
+        <div class="progress-shell" aria-hidden="true">
+          <div class="progress-bar" id="progressBar"></div>
+        </div>
+      </section>
+
+      <section class="gallery" id="gallery" aria-label="今日作品"></section>
+    </main>
+
+    <template id="workTemplate">
+      <article class="work-card">
+        <div class="image-wrap">
+          <img alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" />
+          <div class="type-badge"></div>
+        </div>
+        <div class="work-copy">
+          <div class="meta-row">
+            <span class="source-pill"></span>
+            <span class="license-text"></span>
+          </div>
+          <h2></h2>
+          <p class="artist-line"></p>
+          <div class="swatches" aria-label="画面主色"></div>
+          <div class="analysis-grid">
+            <section>
+              <h3>构图</h3>
+              <p data-analysis="composition"></p>
+            </section>
+            <section>
+              <h3>内容</h3>
+              <p data-analysis="content"></p>
+            </section>
+            <section>
+              <h3>色彩</h3>
+              <p data-analysis="color"></p>
+            </section>
+            <section>
+              <h3>练习</h3>
+              <p data-analysis="learning"></p>
+            </section>
+          </div>
+          <div class="actions">
+            <a class="text-link" data-link="original" target="_blank" rel="noreferrer">高清原图</a>
+            <a class="text-link" data-link="source" target="_blank" rel="noreferrer">来源</a>
+          </div>
+        </div>
+      </article>
+    </template>
+
+    <script src="./app.js?v=20260629-3"></script>
+  </body>
+</html>
