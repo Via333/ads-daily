@@ -116,8 +116,13 @@
     return `《${title}》的内容看点是${cues.join("、")}怎样共同说明主题${detail}。`;
   };
 
-  const meaningText = (title, label, profile, cues, meta) => {
-    const info = meta ? `这张图的信息层包括：${meta}。` : `这张图的信息层首先来自标题《${title}》和分类“${label || "作品"}”。`;
+  const meaningText = (title, label, profile, cues, meta, source, license) => {
+    const parts = [`标题《${title}》`];
+    if (label) parts.push(`类型“${label}”`);
+    if (source) parts.push(`来源“${source}”`);
+    if (license) parts.push(`授权“${license}”`);
+    if (meta) parts.push(meta);
+    const info = `这张图的信息层包括：${parts.join("，")}。`;
     if (profile === "documentary") {
       return `${info} 它的含义不在于把城市拍得漂亮，而在于把公共设施、交通入口和日常秩序变成可观察的对象；你看到的是城市如何被使用、管理和经过。`;
     }
@@ -174,6 +179,8 @@
     if (!title) return;
     const label = clean(card.querySelector(".type-badge")?.textContent || "", 30);
     const meta = clean(card.querySelector(".artist-line")?.textContent || "", 80);
+    const source = clean(card.querySelector(".source-pill")?.textContent || "", 36);
+    const license = clean(card.querySelector(".license-text")?.textContent || "", 36);
     const img = card.querySelector("img");
     const colors = Array.from(card.querySelectorAll(".swatch")).map((node) => node.title || node.style.backgroundColor).filter(Boolean).slice(0, 5);
     const profile = profileFor(title, label);
@@ -183,7 +190,7 @@
     setText(card, "composition", compositionText(title, profile, cues, aspect));
     setText(card, "content", contentText(title, profile, cues, meta));
     setText(card, "color", colorText(title, profile, colors));
-    setText(card, "meaning", meaningText(title, label, profile, cues, meta));
+    setText(card, "meaning", meaningText(title, label, profile, cues, meta, source, license));
     setText(card, "learning", learningText(title, profile, cues));
     card.dataset.specificAnalysis = "true";
   };
