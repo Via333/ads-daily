@@ -116,6 +116,35 @@
     return `《${title}》的内容看点是${cues.join("、")}怎样共同说明主题${detail}。`;
   };
 
+  const meaningText = (title, label, profile, cues, meta) => {
+    const info = meta ? `这张图的信息层包括：${meta}。` : `这张图的信息层首先来自标题《${title}》和分类“${label || "作品"}”。`;
+    if (profile === "documentary") {
+      return `${info} 它的含义不在于把城市拍得漂亮，而在于把公共设施、交通入口和日常秩序变成可观察的对象；你看到的是城市如何被使用、管理和经过。`;
+    }
+    if (profile === "architecture") {
+      return `${info} 它的含义是把建筑从“外观”转成“空间经验”：${cues.slice(0, 3).join("、")}说明人如何接近、进入或理解这个场所。`;
+    }
+    if (profile === "landscape") {
+      return `${info} 它的含义在于把自然或环境组织成一种情绪空间；${cues.slice(0, 3).join("、")}让观看者感到距离、时间和气候，而不只是知道那里有什么。`;
+    }
+    if (profile === "portrait") {
+      return `${info} 它的含义来自人物被观看的方式：${cues.slice(0, 3).join("、")}共同塑造身份、性格和时代感。`;
+    }
+    if (profile === "color") {
+      return `${info} 它的含义不依赖故事，而依赖视觉关系本身；${cues.slice(0, 3).join("、")}像语法一样组织节奏、冲突和平衡。`;
+    }
+    if (profile === "print") {
+      return `${info} 它的含义来自图像被压缩成符号后的传播力；${cues.slice(0, 3).join("、")}让复杂信息变得快速、清楚、可记忆。`;
+    }
+    if (profile === "sculpture") {
+      return `${info} 它的含义在于物体的存在感：${cues.slice(0, 3).join("、")}让材质、重量和精神状态同时出现。`;
+    }
+    if (profile === "film") {
+      return `${info} 它的含义来自单帧里的叙事压力；${cues.slice(0, 3).join("、")}让你能想象这一刻之前和之后发生了什么。`;
+    }
+    return `${info} 它的含义来自${cues.slice(0, 3).join("、")}如何共同指向主题。`;
+  };
+
   const compositionText = (title, profile, cues, aspect) => {
     if (profile === "documentary") return `这张《${title}》好在没有只拍一个孤立物件，而是把${cues.slice(0, 3).join("、")}同时纳入画面。观众先读到地点信息，再顺着周边设施和环境细节确认它是一个真实现场。${aspect}`;
     if (profile === "architecture") return `这张《${title}》的结构感来自${cues.slice(0, 3).join("、")}的相互咬合：硬边线条建立秩序，环境细节负责给尺度。${aspect}`;
@@ -154,6 +183,7 @@
     setText(card, "composition", compositionText(title, profile, cues, aspect));
     setText(card, "content", contentText(title, profile, cues, meta));
     setText(card, "color", colorText(title, profile, colors));
+    setText(card, "meaning", meaningText(title, label, profile, cues, meta));
     setText(card, "learning", learningText(title, profile, cues));
     card.dataset.specificAnalysis = "true";
   };
