@@ -1,92 +1,82 @@
 const SLOTS = [
   {
-    key: "landscape-photo",
-    label: "摄影 / 风景",
-    profile: "landscapePhoto",
+    key: "fashion-editorial",
+    label: "时尚 / 造型",
+    profile: "fashion",
     sources: [
-      { type: "commons", queries: ["featured landscape photography", "mountain landscape photograph", "seascape photograph"] },
-      { type: "met", queries: ["landscape photograph"] },
+      { type: "commons", queries: ["street fashion photography", "fashion editorial photography", "contemporary fashion portrait"] },
     ],
   },
   {
-    key: "portrait-photo",
-    label: "摄影 / 人像",
-    profile: "portraitPhoto",
+    key: "beauty-wellness",
+    label: "商业 / 美妆",
+    profile: "product",
     sources: [
-      { type: "commons", queries: ["portrait photograph featured picture", "black and white portrait photograph", "historic portrait photograph"] },
-      { type: "met", queries: ["portrait photograph"] },
+      { type: "commons", queries: ["cosmetics product photography", "skincare product photograph", "perfume product photograph"] },
     ],
   },
   {
-    key: "documentary-photo",
-    label: "摄影 / 纪实",
-    profile: "documentaryPhoto",
+    key: "food-drink",
+    label: "生活 / 餐饮",
+    profile: "food",
     sources: [
-      { type: "commons", queries: ["documentary photography street scene", "urban documentary photograph", "workers photograph"] },
-      { type: "met", queries: ["documentary photograph"] },
+      { type: "commons", queries: ["specialty coffee food photography", "restaurant dish photography", "modern cafe photography"] },
     ],
   },
   {
-    key: "landscape-painting",
-    label: "绘画 / 风景",
-    profile: "landscapePainting",
+    key: "home-interior",
+    label: "生活 / 居家",
+    profile: "interior",
     sources: [
-      { type: "met", queries: ["landscape painting", "river landscape painting", "mountain painting"] },
-      { type: "commons", queries: ["public domain landscape painting", "featured landscape painting"] },
+      { type: "commons", queries: ["modern residential interior design", "contemporary home interior photograph", "modern kitchen interior photograph"] },
     ],
   },
   {
-    key: "portrait-painting",
-    label: "绘画 / 人物",
-    profile: "portraitPainting",
+    key: "retail-space",
+    label: "商业 / 空间",
+    profile: "retail",
     sources: [
-      { type: "met", queries: ["portrait painting", "figure painting", "self portrait painting"] },
-      { type: "commons", queries: ["public domain portrait painting", "featured portrait painting"] },
+      { type: "commons", queries: ["modern retail store interior photograph", "boutique interior design photograph", "shop window display photograph"] },
     ],
   },
   {
-    key: "color-painting",
-    label: "绘画 / 色彩",
-    profile: "colorPainting",
+    key: "urban-lifestyle",
+    label: "生活 / 街头",
+    profile: "street",
     sources: [
-      { type: "met", queries: ["abstract painting color", "modern painting color", "color study painting"] },
-      { type: "commons", queries: ["public domain abstract painting color", "featured abstract painting"] },
+      { type: "commons", queries: ["urban lifestyle street photography", "city cafe street life photograph", "people walking modern city photograph"] },
     ],
   },
   {
-    key: "print-design",
-    label: "版画 / 平面",
-    profile: "printDesign",
+    key: "travel-hospitality",
+    label: "旅行 / 酒店",
+    profile: "travel",
     sources: [
-      { type: "met", queries: ["Japanese woodblock print", "woodcut print", "poster print"] },
-      { type: "commons", queries: ["Japanese woodblock print public domain", "public domain poster print"] },
+      { type: "commons", queries: ["boutique hotel interior photograph", "modern resort travel photograph", "rooftop restaurant city view photograph"] },
     ],
   },
   {
-    key: "architecture-space",
-    label: "建筑 / 空间",
-    profile: "architecture",
+    key: "branding-packaging",
+    label: "品牌 / 包装",
+    profile: "branding",
     sources: [
-      { type: "commons", queries: ["architecture featured picture interior", "modern architecture photograph", "historic architecture photograph"] },
-      { type: "met", queries: ["architectural photograph"] },
+      { type: "commons", queries: ["contemporary packaging design photograph", "modern product packaging photograph", "creative brand packaging"] },
     ],
   },
   {
-    key: "sculpture-object",
-    label: "雕塑 / 器物",
-    profile: "sculpture",
+    key: "mobility-tech",
+    label: "商业 / 科技",
+    profile: "product",
     sources: [
-      { type: "met", queries: ["sculpture", "statue", "ceramic vessel"] },
-      { type: "commons", queries: ["featured sculpture photograph", "public domain ceramic vessel"] },
+      { type: "commons", queries: ["modern electric vehicle product photograph", "consumer electronics product photography", "modern technology product photograph"] },
     ],
   },
   {
-    key: "film-frame",
-    label: "影像 / 电影帧",
-    profile: "filmFrame",
+    key: "workplace-people",
+    label: "商业 / 人物",
+    profile: "workplace",
     sources: [
-      { type: "commons", queries: ["silent film still public domain", "film still screenshot public domain", "cinema frame public domain"] },
-      { type: "commons", queries: ["movie scene still silent film", "film frame"] },
+      { type: "commons", queries: ["modern workplace people photograph", "creative office team photograph", "contemporary professional portrait"] },
     ],
   },
 ];
@@ -160,7 +150,7 @@ const SOURCE_LABELS = {
   commons: "Wikimedia Commons",
 };
 
-const CACHE_VERSION = "specific-analysis-v1";
+const CACHE_VERSION = "commercial-lifestyle-v1";
 const ARCHIVE_START = "2026-06-29";
 
 const gallery = document.querySelector("#gallery");
@@ -357,12 +347,13 @@ async function fetchCommons(query, slot) {
     action: "query",
     format: "json",
     generator: "search",
-    gsrsearch: `filetype:bitmap ${query} -logo -diagram -map`,
+    gsrsearch: `filetype:bitmap ${query} -logo -diagram -map -painting -engraving -sculpture -historic -nude -nudity`,
     gsrnamespace: "6",
-    gsrlimit: "30",
+    gsrlimit: "40",
+    gsrsort: "create_timestamp_desc",
     prop: "imageinfo",
     iiprop: "url|mime|size|extmetadata",
-    iiurlwidth: "2200",
+    iiurlwidth: "2400",
   });
 
   const data = await fetchJson(`https://commons.wikimedia.org/w/api.php?${params.toString()}`);
@@ -432,7 +423,11 @@ function normalizeCommons(page, slot) {
   const description = stripHtml(metadata.ImageDescription?.value || "");
   const license = stripHtml(metadata.LicenseShortName?.value || metadata.UsageTerms?.value || "Open license");
   const date = stripHtml(metadata.DateTimeOriginal?.value || "");
+  const categories = stripHtml(metadata.Categories?.value || "");
   const sourceUrl = `https://commons.wikimedia.org/wiki/${encodeURIComponent(page.title.replaceAll(" ", "_"))}`;
+  const searchable = [title, objectName, description, categories].join(" ");
+
+  if (!isModernCommercialCandidate(searchable, date)) return null;
 
   return completeWork({
     uniqueKey: `commons:${page.pageid}`,
@@ -449,8 +444,15 @@ function normalizeCommons(page, slot) {
     license,
     width: info.width,
     height: info.height,
-    subjects: [slot.label, title].filter(Boolean),
+    subjects: [slot.label, ...categories.split("|").slice(0, 4), title].filter(Boolean),
   });
+}
+
+function isModernCommercialCandidate(text, date) {
+  const yearMatch = String(date || "").match(/\b(?:19|20)\d{2}\b/);
+  if (yearMatch && Number(yearMatch[0]) < 2018) return false;
+
+  return !/(oil on canvas|watercolou?r|engraving|etching|woodcut|lithograph|manuscript|archaeological|museum collection|historical image|ai[- ]generated|midjourney|stable diffusion)/i.test(text);
 }
 
 function completeWork(work) {
