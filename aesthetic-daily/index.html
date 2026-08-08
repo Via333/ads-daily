@@ -4,14 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>今日审美练习</title>
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=20260808-archive-1" />
   </head>
   <body>
     <main class="app-shell">
       <header class="topbar">
         <div>
           <p class="eyebrow" id="dateLabel">Daily Aesthetic</p>
-          <h1>今日审美练习</h1>
+          <h1 id="pageTitle">今日审美练习</h1>
         </div>
         <div class="toolbar" aria-label="页面操作">
           <button class="icon-button" id="refreshButton" type="button" title="重新抓取今日作品" aria-label="重新抓取今日作品">
@@ -23,6 +23,34 @@
         </div>
       </header>
 
+      <nav class="view-tabs" aria-label="内容日期">
+        <button class="view-tab is-active" id="todayButton" type="button">今天</button>
+        <button class="view-tab" id="archiveButton" type="button" aria-expanded="false" aria-controls="archivePanel">往期归档</button>
+      </nav>
+
+      <section class="archive-panel" id="archivePanel" aria-labelledby="archiveTitle" hidden>
+        <div class="archive-heading">
+          <div>
+            <span class="status-kicker">ARCHIVE</span>
+            <h2 id="archiveTitle">往期归档</h2>
+          </div>
+          <label class="date-picker">
+            <span>跳到日期</span>
+            <input id="archiveDatePicker" type="date" />
+          </label>
+        </div>
+        <div class="archive-groups" id="archiveGroups"></div>
+      </section>
+
+      <nav class="day-navigation" aria-label="前后日期">
+        <button class="day-step" id="previousDayButton" type="button" title="前一天" aria-label="前一天">‹</button>
+        <div class="day-navigation-copy">
+          <span id="viewModeLabel">今日作品</span>
+          <strong id="selectedDateLabel"></strong>
+        </div>
+        <button class="day-step" id="nextDayButton" type="button" title="后一天" aria-label="后一天">›</button>
+      </nav>
+
       <section class="status-panel" aria-live="polite">
         <div>
           <span class="status-kicker">开放馆藏</span>
@@ -33,7 +61,7 @@
         </div>
       </section>
 
-      <section class="gallery" id="gallery" aria-label="今日作品"></section>
+      <section class="gallery" id="gallery" aria-label="每日作品"></section>
     </main>
 
     <template id="workTemplate">
@@ -80,7 +108,7 @@
       </article>
     </template>
 
-    <script src="./app.js?v=20260629-3"></script>
+    <script src="./app.js?v=20260808-archive-1"></script>
     <script src="./specific-analysis.js?v=20260702-3"></script>
   </body>
 </html>
